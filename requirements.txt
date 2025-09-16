@@ -1,0 +1,16 @@
+# Web frameworks
+django
+djangorestframework
+django-extensions
+python-decouple
+python-dotenv
+
+# ASGI/WSGI servers
+gunicorn
+uvicorn[standard]
+
+# FastAPI
+fastapi
+
+# Database
+psycopg2-binary

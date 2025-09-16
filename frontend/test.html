@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <button onclick="testFunction()">Test Button</button>
+    
+    <script>
+        console.log("Script is loading...");
+        
+        function testFunction() {
+            console.log("Button clicked!");
+            alert("JavaScript is working!");
+        }
+        
+        // Test the API call
+        async function testAPI() {
+            try {
+                console.log("Testing API call...");
+                const response = await fetch('http://127.0.0.1:8001/api/subjects');
+                console.log("Response status:", response.status);
+                const data = await response.json();
+                console.log("API data:", data);
+            } catch(error) {
+                console.error("API Error:", error);
+            }
+        }
+        
+        // Run test on page load
+        window.addEventListener('DOMContentLoaded', testAPI);
+    </script>
+</body>
+</html>
